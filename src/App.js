@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from "react";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import "./styles/app.css";
+import "./App.scss";
+import { ClipLoader } from "react-spinners";
+import Navbar from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const Home = lazy(() => import("./components/Home"));
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
+const Details = lazy(() => import("./components/Projects/ProjectCard"));
+
+const App = () => (
+  <BrowserRouter>
+    <div className="container mx-auto ">
+      <div className="overlay "></div>
+      <Navbar />
+      <Suspense
+        fallback={
+          <div className="flex justify-center align-center pt-40 transparent h-screen">
+            <ClipLoader size={120} color="aqua" />
+          </div>
+        }
+      >
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/other-projects" component={Projects} />
+          <Route exact path="/featured-projects" component={Projects} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="details" component={Details} />
+        </Switch>
+      </Suspense>
+      <Footer />
     </div>
-  );
-}
+  </BrowserRouter>
+);
 
 export default App;
