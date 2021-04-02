@@ -190,7 +190,7 @@ const App = () => {
         </div>
         <div class="author hover:text-white">
           <div class="author hover:text-white block">
-            built with React <FaReact /> & TailwindCSS |
+            {/* built with React <FaReact /> & TailwindCSS | */}
             <a href="http://github.com/ikechuku" target="_blank" rel="noreferrer" >
               <br /> TechKnight {new Date().getFullYear()}
             </a>

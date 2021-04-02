@@ -64,7 +64,7 @@ const App = () => {
 
           <div className="pt-12 pb-8 text-center">
             <a href="tel:=234-8103607907">
-              <button className="bg-teal-700 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded">
+              <button className="bg-teal-700 hover:bg-teal-900 text-white font-bold py-2 px-4 rounded-full">
                 Get In Touch
               </button>
             </a>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -87,10 +88,10 @@ const App = () => {
             href="https://docs.google.com/document/d/1Dl__hvtr6n1rEFpYaq51uuIkI4of04Dk8-xM7BfkqA4/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-auto opacity-75 hover:opacity-100 text-inline-block px-4 py-2 leading-none border rounded text-white border-white hover:bg:blue-900 hover:opacity-75 hover:text-teal mt-4 lg:mt-0"
+            className="flex w-auto opacity-75 hover:opacity-100 text-inline-block px-4 py-2 leading-none  rounded text-white border-white hover:bg:blue-900 hover:opacity-75 hover:text-teal mt-4 lg:mt-0"
           >
-            <i className="fas fa-cloud-download-alt pr-2 text-center"></i>
-            <span className="my-auto">MyCV</span>
+            <FaCloudDownloadAlt /> &nbsp;
+            <span className="my-auto">CV</span>
           </a>
         </div>
       </div>
