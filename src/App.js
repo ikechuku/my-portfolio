@@ -10,6 +10,8 @@ const Home = lazy(() => import("./components/Home"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
 const Details = lazy(() => import("./components/Projects/ProjectCard"));
+const NotFound = lazy(() => import("./components/NotFound"));
+
 
 const App = () => (
   <BrowserRouter>
@@ -31,6 +33,7 @@ const App = () => (
           <Route exact path="/featured-projects" component={Projects} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="details" component={Details} />
+          <Route component={NotFound} />
         </Switch>
       </Suspense>
       <Footer />
