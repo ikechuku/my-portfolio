@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Featured from "./Featured";
 import OtherProjects from "./OtherProjects";
 
@@ -14,27 +14,27 @@ const App = () => {
   });
   return (
     <>
-      <div className="w-full justify-center flex text-blue-100 opacity-25 font-semibold p-2 ">
-        <Link
+      <div className="w-full justify-end flex text-blue-100 opacity-25 font-semibold p-2 ">
+        <NavLink
           to="/featured-projects"
-          className="m-5 "
-          onClick={() => setState("featured")}
+          className="m-5 text-red"
+          activeClassName="border-b-2 border-white"
         >
-          Featured Projects{" "}
-        </Link>
-        <Link
+          Featured Projects
+        </NavLink>
+        <NavLink
           to="/other-projects"
+          activeClassName="border-b-2 border-white"
           className="m-5 px-3"
-          onClick={() => setState("others")}
         >
           Other Projects{" "}
-        </Link>
+        </NavLink>
       </div>
       <div className="item-grid shadow-md">
         {state === "/other-projects" ? (
-          <OtherProjects featured={false}/>
+          <OtherProjects featured={false} />
         ) : (
-          <Featured  />
+          <Featured />
         )}
       </div>
     </>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "./style.scss";
+// import { FaGithub, FaEye } from "react-icons/fa";
+
 const App = ({ item }) => {
   const [code, setCode] = useState(false);
   const location = useLocation().pathname;
@@ -57,7 +59,7 @@ const App = ({ item }) => {
               ) : (
                 ""
               )}
-              {/* <div className=" bg-red-400 w-12 h-12">
+              {/* <div className=" flex w-1/5 justify-between">
                 {" "}
                 <a
                   title="view code"
@@ -65,7 +67,7 @@ const App = ({ item }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-github w-full"></i>
+                  {code ? <FaGithub /> : ""}
                 </a>
                 &nbsp;
                 <a
@@ -74,7 +76,7 @@ const App = ({ item }) => {
                   rel="noopener noreferrer"
                   title="view site"
                 >
-                  <i className="fas fa-eye"></i>
+                  <FaEye className="fa" />
                 </a>
               </div> */}
             </div>
