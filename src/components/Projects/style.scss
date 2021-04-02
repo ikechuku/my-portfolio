@@ -1,0 +1,73 @@
+@media (min-width:768px) {
+
+    .project-item:nth-child(odd) {
+        border-left: solid 0.5px rgba(255, 255, 255, .3);
+        border-top: solid 0.5px rgba(255, 255, 255, .3);
+
+
+        .flexed {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        h2 {
+            text-align: right;
+        }
+
+        p {
+            text-align: right;
+        }
+
+        .texted {
+            text-align: left;
+        }
+    }
+
+    .project-item:nth-child(even) {
+        border-right: solid 0.5px rgba(255, 255, 255, .3);
+        border-top: solid 0.5px rgba(255, 255, 255, .3);
+
+        .flexed {
+            display: flex;
+        }
+
+        h2 {
+            text-align: left !important;
+        }
+
+        p {
+            text-align: left !important;
+        }
+
+        .texted {
+            text-align: right;
+        }
+    }
+
+}
+
+.texted {
+    text-align: left;
+}
+
+.tech {
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+}
+
+.project-item:nth-child(odd) {
+    border-left: solid 1.5px rgba(255, 255, 255, .3);
+    border-top: solid 0.5px rgba(255, 255, 255, .3);
+}
+
+.project-item:nth-child(even) {
+    border-right: solid 1.5px rgba(255, 255, 255, .3);
+    border-top: solid 0.5px rgba(255, 255, 255, .3);
+}
+
+.project-item:first-child {
+    border-top: none;
+}
